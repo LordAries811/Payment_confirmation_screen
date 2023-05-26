@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+<head>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.5;
+      background-color: rgb(253, 253, 253);
+    }
+    
+    .container {
+      background-color: #fdfdfd;
+      padding: 20px;
+      max-width: 617px;
+      margin: 0 auto;
+      box-sizing: border-box;
+    }
+    
+    .header {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    
+    .header h1 {
+      color: #333333;
+      margin: 0;
+    }
+    
+    .payment-details {
+      margin-bottom: 20px;
+    }
+    
+    .payment-details table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    
+    .payment-details th,
+    .payment-details td {
+      padding: 13px;
+      text-align: left;
+      border-bottom: 1px solid #dddddd;
+    }
+    
+    .payment-details th {
+      background-color: white;
+    }
+
+    .payment-details td {
+      background-color: white;
+    }
+    
+    .signature {
+      /* padding: 0px; */
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .header-image {
+      text-align: center;
+    }
+
+    .header-image img {
+      max-width: 30%;
+      height: 150px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="header-image">
+        <img src="payment_confirmation.svg">
+      </div>
+      <h1>Payment Confirmation</h1>
+    </div>
+
+    <div class="payment-details">
+      <p>Below invoice has been successfully paid by {input.beneName}. Below are the payment confirmation details for your reference.</p>
+      <table>
+        <tr>
+          <th>Amount</th>
+          <td>{input.instructedCurrency} {input.instructedAmount}</td>
+        </tr>
+        <tr>
+          <th>Timestamp</th>
+          <td>{input.paymentDateTime}</td>
+        </tr>
+        <tr>
+          <th>Payment Details</th>
+          <td>{input.reasonForCollection}</td>
+        </tr>
+        <tr>
+          <th>Payment Method</th>
+          <td>{input.CardBrand}{input.CardType}{input.method}</td>
+        </tr>
+        <tr>
+          <th>Collection Reference</th>
+          <td>{input.collRef}</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="signature">
+      <p>Thanks and Regards,</p>
+      <p>Benepay.io</p>
+    </div>
+  </div>
+</body>
+
+</html>
+
+
+
+
+
+
